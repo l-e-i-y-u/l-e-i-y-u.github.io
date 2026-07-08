@@ -2,6 +2,23 @@
 
 A minimal static academic homepage for GitHub Pages.
 
+## CV
+
+The CV is kept in this repository:
+
+- LaTeX source: `cv/lei_yu_cv_moderncv.tex`
+- Public PDF used by the homepage: `assets/Lei-Yu-CV.pdf`
+
+To update the CV, edit the LaTeX source and rebuild the PDF:
+
+```sh
+make cv
+```
+
+This requires `tectonic` to be installed. The build output goes into
+`cv/build/`, and the generated PDF is copied to `assets/Lei-Yu-CV.pdf` so the
+homepage link stays stable.
+
 ## Local Preview
 
 Open `index.html` directly in a browser, or run a small local server:
