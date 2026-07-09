@@ -35,7 +35,7 @@ The homepage footer uses a lightweight external SVG counter styled like plain
 footer text, so it works on GitHub Pages without a separate backend:
 
 ```text
-Last edited: July 8, 2026. [Views counter]
+Last edited: July 8, 2026. Views: [count]
 ```
 
 This is a simple page-view counter, not a unique-visitor analytics system.
