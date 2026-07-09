@@ -31,8 +31,8 @@ Then visit `http://localhost:8000`.
 
 ## Visitor Counter
 
-The homepage footer uses a lightweight external SVG counter, so it works on
-GitHub Pages without a separate backend:
+The homepage footer uses a lightweight external SVG counter styled like plain
+footer text, so it works on GitHub Pages without a separate backend:
 
 ```text
 Last edited: July 8, 2026. [Views counter]
