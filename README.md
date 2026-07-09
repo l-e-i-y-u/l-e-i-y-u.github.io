@@ -31,41 +31,14 @@ Then visit `http://localhost:8000`.
 
 ## Visitor Counter
 
-The homepage footer is prepared for a minimal view counter:
+The homepage footer uses a lightweight external SVG counter, so it works on
+GitHub Pages without a separate backend:
 
 ```text
-Last edited: July 8, 2026. Views: 1,234.
+Last edited: July 8, 2026. [Views counter]
 ```
 
-The static page calls the endpoint configured in `index.html`:
-
-```html
-data-view-counter-endpoint="/api/views"
-```
-
-For a custom domain proxied through Cloudflare, route `/api/views` to the Worker
-in `worker/visitor-counter.js`. For a plain GitHub Pages URL, deploy the Worker
-to a `workers.dev` URL and replace `/api/views` with that full URL.
-
-The Worker uses a Cloudflare KV binding named `VIEW_COUNTER`. To deploy it:
-
-```sh
-cd worker
-cp wrangler.toml.example wrangler.toml
-npx wrangler kv namespace create VIEW_COUNTER
-```
-
-Copy the generated namespace id into `wrangler.toml`, then deploy:
-
-```sh
-npx wrangler deploy
-```
-
-If the counter service is unavailable, the page silently keeps the original
-minimal footer without showing a broken counter.
-
-This is a lightweight page-view counter, not a unique-visitor analytics system.
-Very close concurrent loads may be approximate when backed only by KV.
+This is a simple page-view counter, not a unique-visitor analytics system.
 
 ## GitHub Pages
 
