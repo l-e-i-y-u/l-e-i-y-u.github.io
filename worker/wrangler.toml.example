@@ -1,0 +1,7 @@
+name = "lei-yu-visitor-counter"
+main = "visitor-counter.js"
+compatibility_date = "2026-07-09"
+
+[[kv_namespaces]]
+binding = "VIEW_COUNTER"
+id = "replace-with-kv-namespace-id"
