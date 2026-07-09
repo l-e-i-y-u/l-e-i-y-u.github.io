@@ -15,7 +15,7 @@ To update the CV, edit the LaTeX source and rebuild the PDF:
 make cv
 ```
 
-This requires `tectonic` to be installed. The build output goes into
+This requires `xelatex` to be installed, for example through MacTeX. The build output goes into
 `cv/build/`, and the generated PDF is copied to `assets/Lei-Yu-CV.pdf` so the
 homepage link stays stable.
 
